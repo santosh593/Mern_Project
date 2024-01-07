@@ -1,0 +1,87 @@
+const { default: mongoose } = require('mongoose');
+
+
+
+const orderdata = mongoose.Schema({
+    shipping_address:{
+        name:{
+            type:String,
+            required:true
+        },
+        email:{
+            type:String,
+            required:true
+        },
+        mobileno:{
+          type:Number,
+          required:true
+        },
+        city:{
+            type:String,
+            required:true
+        },
+        state:{
+            type:String,
+            required:true
+        },
+        pincode:{
+            type:Number,
+            required:true
+        },
+        country:{
+            type:String,
+            required:true
+        }
+    },
+    orderItems:[{
+        product:{
+            type:mongoose.Schema.ObjectId,
+            ref:"product",
+            required:true
+        },
+        qty:{
+            type:Number,
+            required:true
+        },
+        price:{
+            type:Number,
+            required:true
+        },
+    }],
+    order:{
+        order_id:{
+            type:String,
+            required:true
+        },
+        shipping_amount:{
+            type:Number,
+            required:true
+        },
+        tax_amount:{
+            type:Number,
+            required:true
+        },
+        order_total:{
+            type:Number,
+            required:true
+        },
+        grand_total:{
+            type:Number,
+            required:true
+        },
+        order_status:{
+            type:String,
+            required:true
+        },
+        payment_method:{
+            type:String,
+            required:true
+        },
+        created_at:{
+            type:Date,
+            default:Date.now(),
+        }
+    }
+});
+
+module.exports=mongoose.model('order',orderdata);

@@ -1,0 +1,12 @@
+.product-container {
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 20px;
+}

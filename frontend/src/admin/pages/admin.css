@@ -1,0 +1,22 @@
+.product-form-container{
+    margin:auto;
+    display: 'block';
+    width: 700;
+    padding: 30;
+    background: #d5d5d5;
+    margin-top: 60px;
+}
+
+form div {
+    margin-top: 14px;
+}
+
+button.btn.btn-primary {
+    margin-top: 20px;
+    text-align: center;
+    /* margin: auto; */
+}
+
+h4 {
+    text-align: center;
+}
